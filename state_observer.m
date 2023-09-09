@@ -31,6 +31,7 @@ q = Q(1:28);
 % estimator model. Therefore, it can be considered to be sensor measurement
 r_measured = q_dot(6);
 
+v_measured = O_model(2); % The lateral velocity state variable is in the world frame. Hence, inside the vehicle model, it is converted to the chassis frame and stored in the O_model vector
 
 %% Initialization : State Observer 
 
@@ -73,9 +74,9 @@ Fy_2 = Fy_2__2; % No steering in rear sore tire frame = chassis frame
 
 %% Initializing : Measured output and estimator output
 
-y = r_measured;
+y = v_measured;
 
-y_hat = r_hat;
+y_hat = v_hat;
 
 %% Estimator Dynamics
 

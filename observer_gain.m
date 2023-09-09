@@ -28,11 +28,12 @@ B = [C1/m;
      a*C1/Izz];
 
 % Output Matrix
-C = [0 1];
+% NOTE - Assuming that lateral velocity is the output that can be measured 
+C = [1 0];
 
 %% State Observer Gain
 % Using pole placement technique to create the observer gain matrix
 % Using the principle of duality, (A-BK) is equivalent to (A' - C'L').
 % Therefore, A', C' can be used using the placeMIMO function (which is the
 % same as the place.m function of
-input.L = placeMIMO(A',C',[-1,-1])';
+input.L = placeMIMO(A',C',[-15,-17])';

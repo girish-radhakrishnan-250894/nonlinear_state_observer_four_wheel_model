@@ -65,5 +65,5 @@ plot(t, O_simulator, t, q(:,29))
 legend("v","v_{hat}", Location="best")
 
 figure
-plot(t,(q(:,20)), t, q(:,30))
+plot(t,(rad2deg(q(:,20))), t, rad2deg(q(:,30)))
 legend("r","r_{hat}", Location="best")

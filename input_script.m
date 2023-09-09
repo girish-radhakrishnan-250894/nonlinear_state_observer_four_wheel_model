@@ -126,8 +126,8 @@ input.tirFile_3 = mfeval.readTIR('MagicFormula61_Parameters.tir');
 input.tirFile_4 = mfeval.readTIR('MagicFormula61_Parameters.tir');
 
 % Linear cornering stiffness (Lateral)
-input.C1 = 103000*2;
-input.C2 = 80000*2;
+input.C1 = 103000*2.5;
+input.C2 = 80000*2.5;
 
 %% INPUT :- PROPERTIES : MISC.
 input.i_s = 17.842;               % Steering Ratio [-]
