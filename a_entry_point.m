@@ -24,6 +24,10 @@ addpath(genpath(pwd));
 
 input_script;
 
+%% CALCULATING OBSERVER GAIN MATRIX (L)
+
+observer_gain;
+
 %% INITIALIZATION
 v_guess = input.u_start;
 omega_y_1_guess = v_guess/input.r_01;
