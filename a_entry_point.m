@@ -35,12 +35,12 @@ omega_y_2_guess = v_guess/input.r_02;
 omega_y_3_guess = v_guess/input.r_03;
 omega_y_4_guess = v_guess/input.r_04;
 
-q0 = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 input.u_start 0 0 0 0 0 0 0 0 0 omega_y_1_guess omega_y_2_guess omega_y_3_guess omega_y_4_guess 1.1 -0.4];
+q0 = [0 0 0 0 0 0 0 0 0 0 0 0 0 0 input.u_start 0 0 0 0 0 0 0 0 0 omega_y_1_guess omega_y_2_guess omega_y_3_guess omega_y_4_guess 0 0];
 
 %% SIMULATION :- Simulation Options
 
 % Initializing the options struct
-opts = odeset('MaxStep',0.05);
+opts = odeset('MaxStep',0.01);
 
 
 %% SIMULATION :- RUN 
@@ -62,7 +62,7 @@ end
 
 figure
 plot(t, O_simulator, t, q(:,29))
-legend("v","v_hat", Location="best")
+legend("v","v_{hat}", Location="best")
 
 figure
 plot(t,(q(:,20)), t, q(:,30))

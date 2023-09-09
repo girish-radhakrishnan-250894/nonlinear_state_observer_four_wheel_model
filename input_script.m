@@ -36,8 +36,8 @@ addpath(genpath(pwd));
 input.P_v_scaler = 0.003; % P_v is auto-set as 4.04007*m_s*g
 %% INPUT :- STEERING
 
-input.delta = [0 0 0 0 deg2rad(3) deg2rad(3) deg2rad(3)];
-input.time  = [0 1 2 3 4 5 9];
+input.delta = 2*[0 0 0 0 deg2rad(3) deg2rad(3) deg2rad(3)];
+input.time  = [0 1 2 3 4 5 10];
 %% INPUT :- SPEED
 
 input.u_start = 50/3.6;
@@ -124,6 +124,10 @@ input.tirFile_1 = mfeval.readTIR('MagicFormula61_Parameters.tir');
 input.tirFile_2 = mfeval.readTIR('MagicFormula61_Parameters.tir');
 input.tirFile_3 = mfeval.readTIR('MagicFormula61_Parameters.tir');
 input.tirFile_4 = mfeval.readTIR('MagicFormula61_Parameters.tir');
+
+% Linear cornering stiffness (Lateral)
+input.C1 = 103000*2;
+input.C2 = 80000*2;
 
 %% INPUT :- PROPERTIES : MISC.
 input.i_s = 17.842;               % Steering Ratio [-]
