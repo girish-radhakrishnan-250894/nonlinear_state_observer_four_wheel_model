@@ -87,7 +87,7 @@ M_hat = [m 0
          0 Izz];
 
 % Estimator Force & Moments vector
-f_hat_qd_q_u = [Fy_1 + Fy_2 - u*r_hat;
+f_hat_qd_q_u = [Fy_1 + Fy_2 - m*u*r_hat;
                 a*Fy_1 - b*Fy_2
                 ];
 %% Augmented system dynamics ([model estimator])
