@@ -7,7 +7,7 @@
 
 %% Initialization : Estimator Parameters
 % Parameters
-m = input.m_s;
+m = input.m_s + input.m_u_1 + input.m_u_2 + input.m_u_3 + input.m_u_4;
 Izz = input.J_z;
 C1 = input.C1;
 C2 = input.C2;
@@ -36,6 +36,6 @@ C = [1 0];
 % Using the principle of duality, (A-BK) is equivalent to (A' - C'L').
 % Therefore, A', C' can be used using the placeMIMO function (which is the
 % same as the place.m function of
-input.L = placeMIMO(A',C',[-20,-20])';
+input.L = -place(A',C',[-40,-5])';
 
 eig(A - input.L*C)
